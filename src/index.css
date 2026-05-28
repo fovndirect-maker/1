@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Be Vietnam Pro", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* VNDIRECT Brand Emerald Color Palette Overrides */
+  --color-amber-50: #f0fbf7;
+  --color-amber-100: #dcf7ec;
+  --color-amber-200: #b4edd6;
+  --color-amber-300: #7edcbd;
+  --color-amber-400: #49c49d;
+  --color-amber-500: #1d9e75;
+  --color-amber-600: #1d9e75;
+  --color-amber-700: #14805e;
+  --color-amber-800: #10664c;
+  --color-amber-900: #0d543f;
+  --color-amber-950: #063024;
+}
+
+/* Animations helpers */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+

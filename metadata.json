@@ -1,0 +1,6 @@
+{
+  "name": "Job Track Declaration",
+  "description": "Hương lộ nghề nghiệp, khai báo Job Track, co-sign của SM, xử lý SLA và escalation bởi IG.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
