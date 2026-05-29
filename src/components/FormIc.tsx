@@ -164,8 +164,8 @@ export default function FormIc({ record, onUpdateRecord, onSubmit }: FormIcProps
       </div>
 
       {errorMsg && (
-        <div className="p-3.5 mx-4 mt-4 bg-rose-50 border border-rose-200 rounded-lg text-xs text-rose-800 font-medium flex items-start gap-2 animate-bounce">
-          <ShieldAlert className="w-4 h-4 shrink-0 text-rose-600 mt-0.5" />
+        <div className="p-3.5 mx-4 mt-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 font-medium flex items-start gap-2 animate-bounce">
+          <ShieldAlert className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
           <div>{errorMsg}</div>
         </div>
       )}
@@ -338,7 +338,7 @@ export default function FormIc({ record, onUpdateRecord, onSubmit }: FormIcProps
                   {record.declaresCount === 1 ? (
                     <span className="px-2 py-0.5 bg-sky-100 text-sky-800 text-[10px] font-bold border border-sky-200 rounded-sm uppercase">Khai báo đầu: Optional (Tự chọn)</span>
                   ) : (
-                    <span className="px-2 py-0.5 bg-rose-100 text-rose-800 text-[10px] font-bold border border-rose-200 rounded-sm uppercase">Khai báo edit {record.declaresCount}: Bắt buộc điền</span>
+                    <span className="px-2 py-0.5 bg-amber-100 text-amber-900 text-[10px] font-bold border border-amber-200 rounded-sm uppercase">Khai báo edit {record.declaresCount}: Bắt buộc điền</span>
                   )}
                 </div>
               </div>
@@ -347,7 +347,7 @@ export default function FormIc({ record, onUpdateRecord, onSubmit }: FormIcProps
                 {/* Question 1 */}
                 <div className="space-y-1.5">
                   <label className="text-[11.5px] font-semibold text-stone-800 leading-snug">
-                    ❓ 1. Điều gì khiến tôi chọn lĩnh vực này? {record.declaresCount > 1 && <span className="text-rose-500 font-bold">*</span>}
+                    ❓ 1. Điều gì khiến tôi chọn lĩnh vực này? {record.declaresCount > 1 && <span className="text-amber-600 font-bold">*</span>}
                   </label>
                   <textarea
                     rows={2}
@@ -362,7 +362,7 @@ export default function FormIc({ record, onUpdateRecord, onSubmit }: FormIcProps
                 {/* Question 2 */}
                 <div className="space-y-1.5">
                   <label className="text-[11.5px] font-semibold text-stone-800 leading-snug">
-                    ❓ 2. Tôi đang nhìn nhận vị trí hiện tại của mình thế nào? {record.declaresCount > 1 && <span className="text-rose-500 font-bold">*</span>}
+                    ❓ 2. Tôi đang nhìn nhận vị trí hiện tại của mình thế nào? {record.declaresCount > 1 && <span className="text-amber-600 font-bold">*</span>}
                   </label>
                   <textarea
                     rows={2}
@@ -377,7 +377,7 @@ export default function FormIc({ record, onUpdateRecord, onSubmit }: FormIcProps
                 {/* Question 3 */}
                 <div className="space-y-1.5">
                   <label className="text-[11.5px] font-semibold text-stone-800 leading-snug">
-                    ❓ 3. Tôi muốn trở thành gì trong 12 tháng tới? {record.declaresCount > 1 && <span className="text-rose-500 font-bold">*</span>}
+                    ❓ 3. Tôi muốn trở thành gì trong 12 tháng tới? {record.declaresCount > 1 && <span className="text-amber-600 font-bold">*</span>}
                   </label>
                   <textarea
                     rows={2}

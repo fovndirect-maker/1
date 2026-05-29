@@ -663,7 +663,7 @@ export default function App() {
               <Award className={`w-4 h-4 ${activeMenuItem === 'ilead' ? 'text-white' : 'text-stone-500'}`} />
               {!sidebarCollapsed && <span>iLEAD Path</span>}
               {!sidebarCollapsed && (
-                <span className="ml-auto px-1.5 py-0.5 bg-rose-600 text-white rounded-full font-mono text-[9px] font-bold">1</span>
+                <span className="ml-auto px-1.5 py-0.5 bg-amber-500 text-stone-950 rounded-full font-mono text-[9px] font-black">1</span>
               )}
             </button>
 
@@ -693,7 +693,7 @@ export default function App() {
               <MessageSquare className="w-4 h-4 text-stone-500" />
               {!sidebarCollapsed && <span>dLink Chat Box</span>}
               {!sidebarCollapsed && (
-                <span className="absolute top-2 right-3 w-1.5 h-1.5 bg-rose-500 rounded-full"></span>
+                <span className="absolute top-2 right-3 w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
               )}
             </button>
 
@@ -1234,7 +1234,7 @@ export default function App() {
                               </button>
                               <button
                                 onClick={() => handleTimeTravelSim(48)}
-                                className="py-2.5 px-3 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold text-center transition-all border border-rose-500 cursor-pointer"
+                                className="py-2.5 px-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-bold text-center transition-all border border-amber-500 cursor-pointer"
                                 id="btn-time-travel-48h"
                               >
                                 Kích hoạt Escalation (+48h)
@@ -1253,7 +1253,7 @@ export default function App() {
                                   <strong>SM phản hồi Xem xét thêm (Nhánh B)</strong>: Submit Job Track bằng vai <span className="text-white font-semibold">IC</span> → Sang vai <span className="text-white font-semibold">SM</span> → Nhập ý kiến phản hồi và bấm "Xem xét thêm" → Sang vai <span className="text-white font-semibold">IG</span> để giải quyết hoà giải, chọn nộp kết quả hoà nghị hoặc trả về làm lại nháp.
                                 </li>
                                 <li>
-                                  <strong>SLA 48h Escalation (Nhánh C)</strong>: Đăng ký Job Track ở vai <span className="text-white font-semibold">IC</span> và Submit → Chuyển sang vai <span className="text-white font-semibold">SYS</span> hoặc sử dụng nút tua thời gian → Tua thêm <strong className="text-white">48 giờ</strong> → Hệ thống tự động đẩy trạng thái sang <span className="text-rose-400 font-semibold">Escalation</span> và dồn notification sang dLink của <span className="text-white font-semibold">IG</span>.
+                                  <strong>SLA 48h Escalation (Nhánh C)</strong>: Đăng ký Job Track ở vai <span className="text-white font-semibold">IC</span> và Submit → Chuyển sang vai <span className="text-white font-semibold">SYS</span> hoặc sử dụng nút tua thời gian → Tua thêm <strong className="text-white">48 giờ</strong> → Hệ thống tự động đẩy trạng thái sang <span className="text-amber-400 font-semibold">Escalation</span> và dồn notification sang dLink của <span className="text-white font-semibold">IG</span>.
                                 </li>
                                 <li>
                                   <strong>Auto Co-signed tại 96h (Nhánh D)</strong>: Sau khi hồ sơ đã nằm ở nhánh Escalation / Pending / Reviewing, tiếp tục tua thời gian vượt quá tổng mức <strong className="text-white">96 giờ</strong> → Hệ thống sẽ tự kích hoạt <span className="text-teal-300 font-semibold">Auto Co-signed by system</span>, ghi lại dấu lịch sử tự động.
@@ -1765,9 +1765,9 @@ export default function App() {
 
                   <button 
                     onClick={() => handleTimeTravelSim(48)}
-                    className="p-3 bg-rose-700 hover:bg-rose-800 border border-rose-600 text-xs font-bold rounded-lg cursor-pointer transition-colors flex flex-col gap-1 text-left text-white"
+                    className="p-3 bg-amber-600 hover:bg-amber-700 border border-amber-500 text-xs font-bold rounded-lg cursor-pointer transition-colors flex flex-col gap-1 text-left text-white"
                   >
-                    <span className="text-[10px] text-rose-200 font-mono">Gia tốc khẩn</span>
+                    <span className="text-[10px] text-amber-100 font-mono">Gia tốc khẩn</span>
                     <span>Escalate SLA +48h</span>
                   </button>
                 </div>

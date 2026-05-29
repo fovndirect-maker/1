@@ -17,7 +17,7 @@ export default function SlaTracker({ status, elapsedHours, onTimeTravel }: SlaTr
       case 'Draft': return 'bg-amber-100 text-amber-800 border-amber-200';
       case 'Pending co-sign': return 'bg-sky-100 text-sky-800 border-sky-200';
       case 'Reviewing': return 'bg-violet-100 text-violet-800 border-violet-200';
-      case 'Escalation': return 'bg-rose-100 text-rose-800 border-rose-200 animate-pulse';
+      case 'Escalation': return 'bg-amber-150 text-amber-950 border-amber-200 animate-pulse';
       case 'Co-signed': return 'bg-emerald-100 text-emerald-800 border-emerald-200';
       case 'Auto Co-signed': return 'bg-teal-100 text-teal-800 border-teal-200';
     }
@@ -61,7 +61,7 @@ export default function SlaTracker({ status, elapsedHours, onTimeTravel }: SlaTr
           <div className="h-8 w-[1px] bg-stone-200"></div>
           <div>
             <span className="block text-[10px] text-stone-400 font-medium uppercase font-mono">SLA còn lại</span>
-            <span className={`text-sm font-bold font-mono ${96 - elapsedHours <= 0 ? 'text-rose-600' : 'text-amber-700'}`}>
+            <span className={`text-sm font-bold font-mono ${96 - elapsedHours <= 0 ? 'text-amber-650 font-black' : 'text-amber-700'}`}>
               {96 - elapsedHours > 0 ? `${96 - elapsedHours} giờ` : 'Đã hết hạn'}
             </span>
           </div>
@@ -76,7 +76,7 @@ export default function SlaTracker({ status, elapsedHours, onTimeTravel }: SlaTr
             className={`h-full transition-all duration-500 rounded-full ${
               status === 'Co-signed' ? 'bg-emerald-500' :
               status === 'Auto Co-signed' ? 'bg-teal-500' :
-              elapsedHours >= 96 ? 'bg-rose-500' :
+              elapsedHours >= 96 ? 'bg-amber-600' :
               elapsedHours >= 48 ? 'bg-amber-500' : 'bg-sky-500'
             }`}
             style={{ width: `${percentage}%` }}
@@ -115,8 +115,8 @@ export default function SlaTracker({ status, elapsedHours, onTimeTravel }: SlaTr
           </div>
 
           <div className="text-right relative">
-            <div className="absolute top-[-26px] right-0 w-2.5 h-2.5 rounded-full bg-rose-600 animate-pulse"></div>
-            <strong className="block text-rose-700 font-semibold font-mono">96h (Gới hạn)</strong>
+            <div className="absolute top-[-26px] right-0 w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></div>
+            <strong className="block text-amber-750 font-semibold font-mono">96h (Giới hạn)</strong>
             <span className="text-[10px] text-stone-400">Auto Co-sign</span>
           </div>
         </div>
@@ -156,10 +156,10 @@ export default function SlaTracker({ status, elapsedHours, onTimeTravel }: SlaTr
       )}
 
       {status === 'Escalation' && (
-        <div className="bg-rose-50 border border-rose-100 rounded-lg p-3.5 text-xs text-rose-950 flex items-start gap-2.5 animate-pulse">
-          <ShieldAlert className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
+        <div className="bg-amber-55/80 border border-amber-200 rounded-lg p-3.5 text-xs text-stone-800 flex items-start gap-2.5 animate-pulse">
+          <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
           <div>
-            <div className="font-semibold text-rose-900">⚠️ Nhánh C: Báo Động Quá Hạn 48h (Escalation Active)</div>
+            <div className="font-semibold text-amber-900">⚠️ Nhánh C: Báo Động Quá Hạn 48h (Escalation Active)</div>
             <p className="mt-1 text-stone-600">
               SM đã quá hạn 48 giờ phản hồi. Hệ thống tự động kích hoạt cảnh báo gửi tới IG. IG cần liên lạc với SM để thu thập lý do trì hoãn (Delay - operational, Concern về nội dung, SM non-responsive) và hướng dẫn hoàn thành sớm trước thời hạn 96h.
             </p>

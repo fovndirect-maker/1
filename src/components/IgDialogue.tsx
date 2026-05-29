@@ -57,7 +57,7 @@ export default function IgDialogue({ record, onPostResolution, onOverrideSlaHour
           </div>
           <h3 className="text-sm font-bold text-white">Kết Nối Hoà Giải & Xử Lý Escalation</h3>
         </div>
-        <span className="text-xs font-semibold text-rose-400 bg-rose-950/40 px-2 py-0.5 rounded-md animate-pulse">
+        <span className="text-xs font-semibold text-amber-400 bg-stone-800 px-2 py-0.5 rounded-md animate-pulse">
           SLA Action Needed
         </span>
       </div>
@@ -90,7 +90,7 @@ export default function IgDialogue({ record, onPostResolution, onOverrideSlaHour
           </h4>
 
           {errorMsg && (
-            <div className="p-3 bg-rose-50 border border-rose-200 text-xs text-rose-800 rounded font-semibold">
+            <div className="p-3 bg-amber-50 border border-amber-200 text-xs text-amber-900 rounded font-semibold">
               {errorMsg}
             </div>
           )}
@@ -164,10 +164,10 @@ export default function IgDialogue({ record, onPostResolution, onOverrideSlaHour
           </div>
 
           {/* SLA Warning */}
-          <div className="p-3 bg-rose-50/50 border border-rose-200 rounded-lg text-[10.5px] text-stone-600 flex items-start gap-1">
-            <Clock className="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5" />
+          <div className="p-3 bg-amber-50/50 border border-amber-200 rounded-lg text-[10.5px] text-stone-600 flex items-start gap-1">
+            <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
             <div>
-              <strong>🔔 Quy tắc SLA 96h khắt khe:</strong> IG có đúng 2 ngày để thúc giục & giải quyết từ lúc Escalation (tức tổng mốc 96h kể từ lúc IC nhấn submit). Nếu quá mốc 96h, hệ thống sẽ gán log <span className="font-semibold text-rose-700">"Auto Co-signed by system"</span> và tự động kết thúc vòng lặp để giải phóng hồ sơ.
+              <strong>🔔 Quy tắc SLA 96h khắt khe:</strong> IG có đúng 2 ngày để thúc giục & giải quyết từ lúc Escalation (tức tổng mốc 96h kể từ lúc IC nhấn submit). Nếu quá mốc 96h, hệ thống sẽ gán log <span className="font-semibold text-amber-800">"Auto Co-signed by system"</span> và tự động kết thúc vòng lặp để giải phóng hồ sơ.
             </div>
           </div>
 

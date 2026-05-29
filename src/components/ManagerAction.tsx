@@ -80,16 +80,16 @@ export default function ManagerAction({ record, onCoSign, onReviewLater }: Manag
             {/* SLA Alert banner */}
             <div className={`p-4 rounded-lg text-xs flex items-start gap-2.5 border ${
               isOverdue 
-                ? 'bg-rose-50 border-rose-200 text-rose-950' 
+                ? 'bg-amber-50 border-amber-300 text-stone-900' 
                 : 'bg-amber-50/50 border-amber-200/50 text-stone-700'
             }`}>
-              <AlertTriangle className={`w-4 h-4 shrink-0 mt-0.5 ${isOverdue ? 'text-rose-600' : 'text-amber-600'}`} />
+              <AlertTriangle className={`w-4 h-4 shrink-0 mt-0.5 ${isOverdue ? 'text-amber-600' : 'text-amber-600'}`} />
               <div>
                 {isOverdue ? (
                   <>
-                    <strong className="text-rose-900 font-extrabold block">🚨 CẢNH BÁO: ĐÃ QUÁ HẠN SLA 48H CHO SM</strong>
+                    <strong className="text-amber-900 font-extrabold block">🚨 CẢNH BÁO: ĐÃ QUÁ HẠN SLA 48H CHO SM</strong>
                     <p className="mt-1 leading-relaxed text-stone-600">
-                      Thời gian hiện tại đã trôi qua <strong className="text-rose-700">{record.elapsedHours} giờ</strong> kể từ lúc IC gửi hồ sơ. Trạng thái đã chuyển thành <strong className="font-semibold text-rose-800">Escalation</strong> gửi thông báo khẩn cấp cho ban IG can thiệp. Hãy nhanh chóng co-sign hoặc đưa ra ghi chú để giải quyết bế tắc.
+                      Thời gian hiện tại đã trôi qua <strong className="text-amber-700">{record.elapsedHours} giờ</strong> kể từ lúc IC gửi hồ sơ. Trạng thái đã chuyển thành <strong className="font-semibold text-amber-800">Escalation</strong> gửi thông báo khẩn cấp cho ban IG can thiệp. Hãy nhanh chóng co-sign hoặc đưa ra ghi chú để giải quyết bế tắc.
                     </p>
                   </>
                 ) : (
@@ -173,7 +173,7 @@ export default function ManagerAction({ record, onCoSign, onReviewLater }: Manag
             </div>
 
             {errorMsg && (
-              <div className="p-3 bg-rose-50 border border-rose-200 rounded-lg text-xs text-rose-800 font-medium">
+              <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 font-medium">
                 {errorMsg}
               </div>
             )}
